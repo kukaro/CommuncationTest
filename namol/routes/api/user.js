@@ -47,7 +47,7 @@ router.get('/:email', function (req, res, next) {
 
 router.post('/:email/:password/:username', function (req, res, next) {
     var userEmail = req.params['email'];
-    var userPassowrd = req.params['passowrd'];
+    var userPassowrd = req.params['password'];
     var userUsername = req.params['username'];
     const task1 = function (callback) {
         miUser.insert(userEmail, userPassowrd, userUsername, function (rows) {
